@@ -1,15 +1,9 @@
-% Interval boundaries
 xa = 0;
 xb = 2 * pi;
-
-% Initialize error list
 errorList = [];
-% Range of N values
 nValues = [40, 80, 160, 320];
 
-% Loop over each N value
 for n = nValues
-    % Generate points and step size
     x = linspace(xa, xb, n + 1);
     h = (xb - xa) / n;
     

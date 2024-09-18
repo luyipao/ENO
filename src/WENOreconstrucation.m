@@ -1,4 +1,4 @@
-function y = WENOreconstruction(xa, xb, k, N, f)
+function y = WENOreconstrucation(xa, xb, k, N, f)
     % Check if k is 3
     if k ~= 3
         error("Right now, k must be 3");

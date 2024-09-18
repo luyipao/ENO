@@ -5,6 +5,7 @@ k = 3;
 NValues = [40, 80 160 320];
 f = @func;
 for N = NValues
+    X = linspace(xa, xb, N+1);
     yExact = f(X);
     y = WENOreconstrucation(xa, xb, k, N, @func);
     yCalculated = y(:,2);
@@ -23,7 +24,7 @@ filename = sprintf('WENODiscontinue.pdf');
 filename = fullfile('..\docs\images',filename);
 exportgraphics(gcf, filename, 'ContentType', 'vector');
 
-close;
+%close;
 
 
 function y = func(x)
